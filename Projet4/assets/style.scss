@@ -40,6 +40,9 @@ p {
 
 
 header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
     nav {
         height: 63px;

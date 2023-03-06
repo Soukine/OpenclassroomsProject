@@ -21,6 +21,11 @@ p {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 header nav {
   height: 63px;
   width: 100%;
