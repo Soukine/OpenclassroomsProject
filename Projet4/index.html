@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="assets/style.css" rel="stylesheet">
+    <title>ohmyfood</title>
+    <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <nav>
-            <img class="logo" src="assets/images/logo/ohmyfood@2x.svg">
+            <img class="logo" alt="logo ohmyfood" src="assets/images/logo/ohmyfood@2x.svg">
         </nav>
         <div class="search">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paris, Belleville</p>
+            <div class="search-bar">
+                <i class="fa-solid fa-location-dot"></i> <input type="text" value="Paris, Belleville">
+            </div>
         </div>
     </header>
     <main>
@@ -26,19 +28,25 @@
             <h2>Réservez le menu qui vous convient</h2>
             <h3>Découvrez des restaurants d’exception, sélectionnés par nos soins.</h3>
             <button class="btn" type="button">
-                <p>Explorer nos restaurants</p>
+                Explorer nos restaurants
             </button>
         </section>
         <article>
             <div class="fonction">
                 <h2>Fonctionnement</h2>
-                <div class="etape"><i class="fa-solid fa-mobile-screen-button"></i>
+                <div class="etape">
+                    <div class="number">1</div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
-                <div class="etape"><i class="fa-solid fa-list-ul"></i>
+                <div class="etape">
+                    <div class="number">2</div>
+                    <i class="fa-solid fa-list-ul"></i>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="etape"><i class="fa-solid fa-store"></i>
+                <div class="etape">
+                    <div class="number">3</div>
+                    <i class="fa-solid fa-store"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
@@ -56,7 +64,8 @@
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <i class="fa-regular heart_empty fa-heart fa-xl"></i>
+                    <i class="fa-solid fa-heart heart_solid fa-xl"></i>
                 </div>
             </a>
             <a href="#" class="card">
@@ -69,7 +78,8 @@
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <i class="fa-regular heart_empty fa-heart fa-xl"></i>
+                    <i class="fa-solid fa-heart heart_solid fa-xl"></i>
                 </div>
             </a>
             <a href="#" class="card">
@@ -79,10 +89,14 @@
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+
+                    <i class="fa-regular heart_empty fa-heart fa-xl"></i>
+                    <i class="fa-solid fa-heart heart_solid fa-xl"></i>
+
+
                 </div>
             </a>
-            <a href="#"class="card">
+            <a href="#" class="card">
                 <img class="card-photo" alt="oui"
                     src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
                 <div class="card-size">
@@ -90,13 +104,15 @@
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <i class="fa-regular heart_empty fa-heart fa-xl"></i>
+                    <i class="fa-solid fa-heart heart_solid fa-xl"></i>
                 </div>
             </a>
         </div>
+    </main>
     <footer>
         <div class="info">
-            <img class="svg" src="assets/images/logo/ohmyfood@2x.svg">
+            <img class="svg" alt="logo ohmyfood" src="assets/images/logo/ohmyfood@2x.svg">
             <div class="info1">
                 <i class="fa-solid fa-utensils fa-xs"></i>
                 <p>Proposer un restaurant</p>
