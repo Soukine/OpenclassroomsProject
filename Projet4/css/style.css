@@ -1,4 +1,4 @@
-header .search {
+header .search, .main .menu .menu-card:hover .validation, .main .menu-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,7 @@ p,
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+  justify-content: center;
 }
 
 header {
@@ -32,15 +33,29 @@ header {
   flex-direction: column;
   text-align: center;
 }
+header .return {
+  display: flex;
+  align-items: center;
+}
+header .return a {
+  color: black;
+}
+header .return a i {
+  position: absolute;
+  left: 2rem;
+  transform: translate(-50%, -50%);
+}
+header h3 {
+  color: #353535;
+}
 header nav {
+  display: flex;
+  justify-content: center;
   height: 63px;
   width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
-}
-header .logo {
-  margin-top: 18px;
 }
 header .search {
   background: #EAEAEA;
@@ -56,10 +71,30 @@ header .search .search-bar input {
   border: none;
   outline: none;
   text-align: center;
+  width: 130px;
 }
 header .search .search-bar input:focus, header .search .search-bar input:hover {
   transition: 1s;
   opacity: 0.5;
+}
+
+.btn {
+  margin-bottom: 57px;
+  height: 3rem;
+  width: 13rem;
+  font-size: 1rem;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: 0;
+  color: white;
+  transition: 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #ff88de, #9b63df);
 }
 
 main {
@@ -77,21 +112,6 @@ main section h2 {
 main section h3 {
   margin-bottom: 27px;
 }
-main section .btn {
-  margin-bottom: 57px;
-  height: 3rem;
-  width: 13rem;
-  background-color: linear-gradient(180deg, #ff79da 100%, #9356dc 100%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  border: 0;
-  color: white;
-}
-main section .btn:hover {
-  cursor: pointer;
-  transition: 0.3s;
-  transform: translateY(-6px);
-}
 main article {
   background-color: #FFFFFF;
   margin: 0 5%;
@@ -106,15 +126,22 @@ main article .fonction {
   height: 440px;
   gap: 3%;
 }
-main article .fonction .etape {
+main article .fonction .container-etape {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  gap: 0.5rem;
+}
+main article .etape {
   display: flex;
   align-items: center;
-  height: 18%;
+  height: 100%;
+  width: 100%;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-main article .fonction .etape .number {
+main article .etape .number {
   background-color: #9356DC;
   color: white;
   position: relative;
@@ -123,44 +150,46 @@ main article .fonction .etape .number {
   padding: 3px 8px 3px 8px;
   border-radius: 50%;
 }
-main article .fonction .etape:nth-child(4) i {
+main article .etape:nth-child(4) i {
   color: #9356DC;
 }
-main article .fonction .etape:last-child {
+main article .etape:last-child {
   background-color: #F5EDFF;
 }
-main article .fonction .etape .fa-solid {
+main article .etape .fa-solid {
   color: #7E7E7E;
   margin-left: 12%;
   width: 10%;
 }
-main .restaurant {
+
+.restaurant {
   background-color: #f3f3f3;
-  padding: 5%;
 }
-main .restaurant h3 {
+.restaurant .container-card {
+  margin: 0 5%;
+}
+.restaurant h3 {
   font-weight: 700;
   text-decoration: none;
 }
-main .restaurant h2 {
-  margin-bottom: 1.2rem;
-  margin-top: 2rem;
+.restaurant h2 {
+  margin: 2rem 5% 1.2rem;
 }
-main .restaurant .card {
+.restaurant .card {
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
   text-decoration: none;
   color: black;
 }
-main .restaurant .card:hover {
+.restaurant .card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 15px;
 }
-main .restaurant .card .new {
+.restaurant .card .new {
   position: absolute;
-  right: 8%;
-  margin-top: 3.6%;
+  left: 8%;
+  margin-top: 3%;
   width: 18%;
   height: 4%;
   background: #99E2D0;
@@ -171,14 +200,14 @@ main .restaurant .card .new {
   justify-content: center;
   align-items: center;
 }
-main .restaurant .card .card-photo {
+.restaurant .card .card-photo {
   width: 100%;
   height: 20vh;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .restaurant .card .card-size {
+.restaurant .card .card-size {
   background: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
@@ -187,17 +216,17 @@ main .restaurant .card .card-size {
   display: flex;
   align-items: center;
 }
-main .restaurant .card .card-size .text {
+.restaurant .card .card-size .text {
   margin-left: 3%;
 }
-main .restaurant .card .card-size .fa-heart {
+.restaurant .card .card-size .fa-heart {
   position: absolute;
   right: 10%;
 }
-main .restaurant .card .card-size .heart_solid {
+.restaurant .card .card-size .heart_solid {
   opacity: 0;
 }
-main .restaurant .card .card-size .heart_solid:hover {
+.restaurant .card .card-size .heart_solid:hover {
   color: red;
   opacity: 1;
   display: block;
@@ -214,23 +243,30 @@ footer .fa-solid {
   margin-bottom: 5px;
 }
 footer img {
-  width: 25%;
+  width: 9rem;
 }
 footer .info {
   margin: 0 5%;
-  margin-top: 22px;
 }
-footer .info .svg {
-  color: #FFFFFF;
-  margin: 2% 0;
+footer .info .footer-logo {
+  display: flex;
+  order: 1;
+}
+footer .info .footer-logo a {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  margin: 1.2rem 0;
 }
 footer .info .info1 {
-  gap: 3%;
   display: flex;
   align-items: center;
 }
 footer .info .info1 .fa-solid {
-  width: 4%;
+  width: 1.5rem;
 }
 
 /* PALETTE DU GOUT */
@@ -242,26 +278,213 @@ footer .info .info1 .fa-solid {
 }
 
 .main {
-  background-color: red;
+  background-color: #F7F7F7;
   border-radius: 40px 40px 0px 0px;
   position: relative;
-  bottom: 40px;
+  margin-top: -3rem;
 }
 .main .head {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+  padding: 2.5rem 1.25rem 0 1.25rem;
+}
+.main .head h2 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
 }
 .main .menu {
-  margin: 0 2%;
+  margin: 0px 25%;
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.main .menu .menu-title {
+  margin: 1.5rem 0 1.5rem 0;
+  position: relative;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.main .menu .menu-title::after {
+  content: "";
+  border: 2px solid #99E2D0;
+  width: 30px;
+  position: absolute;
+  bottom: -10px;
 }
 .main .menu .menu-card {
-  height: 10%;
+  height: 4.3rem;
+  width: 100%;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  margin: 2%;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation-name: etape-magic;
+  animation-duration: 1.2s;
 }
-.main .menu .menu-card p {
-  float: right;
+.main .menu .menu-card:hover .validation {
+  animation: left 0.5s ease;
+  cursor: pointer;
+  transform-origin: right;
+}
+.main .menu .menu-card:hover .cash {
+  padding-right: 5rem;
+  transition: 0.5s ease;
+}
+.main .menu .validation {
+  display: none;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 1rem;
+  height: 100%;
+}
+.main .menu .validation i {
+  color: white;
+  animation: rotate 0.5s ease-out;
+}
+.main .menu .menu-text {
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 1.2rem;
+}
+.main .menu .menu-text h2 {
+  font-weight: bold;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main .menu .menu-text p {
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main .menu .cash {
+  padding-right: 1.2rem;
+}
+.main .menu .cash p {
+  font-weight: bold;
+}
+.main .menu-btn {
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  header .return a i {
+    left: 12rem;
+  }
+  main article .etape {
+    width: 30%;
+    max-width: 450px;
+  }
+  main article .fonction {
+    height: 300px;
+  }
+  main article .fonction .container-etape {
+    flex-direction: row;
+    height: 20%;
+    justify-content: space-between;
+  }
+  main .restaurant .scrollbar {
+    overflow-x: scroll;
+    margin: 0 5%;
+  }
+  main .restaurant .container-card {
+    display: flex;
+    gap: 3%;
+  }
+  main .restaurant .container-card .new {
+    margin-top: 1.2rem;
+    margin-left: 11rem;
+    width: 7rem;
+    height: 2.2rem;
+  }
+  main .restaurant .container-card .card-photo {
+    width: 30vw;
+  }
+  .main {
+    margin: -3rem 12rem 0 12rem;
+  }
+  .main .head {
+    justify-content: center;
+    gap: 2rem;
+  }
+  footer {
+    height: 145px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .container-info {
+    display: flex;
+    gap: 2.5rem;
+  }
+  footer .info {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+  footer .info .footer-logo {
+    display: flex;
+    order: 1;
+  }
+  footer .info .footer-logo a {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+  }
+  footer .info1:hover,
+  footer .info2 p:hover {
+    cursor: pointer;
+    color: #ff79da;
+  }
+  footer .info2 {
+    flex-direction: row;
+    display: flex;
+    gap: 2.5rem;
+  }
+  footer .info1 {
+    align-items: center;
+  }
+}
+@keyframes left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-100px);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes etape-magic {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
